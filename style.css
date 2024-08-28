@@ -9,9 +9,12 @@ body {
 }
 
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 80px;
-    padding: 20px 20px;
     background: dodgerblue;
+    padding: 0 20px;
 }
 
 .container {
