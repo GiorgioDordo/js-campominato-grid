@@ -21,12 +21,14 @@ play.addEventListener('click', function(e){
     for (let i = 0; i < totalCells; i++) {
         const cell = createCell(i + 1);
 
+        // print in console and color the cells when clicked
         cell.addEventListener('click', () => {
         
             cell.classList.add('clicked');
             console.log(i);
         })
 
+        // print cells in DOm
         grid.appendChild(cell);
     }
 })
