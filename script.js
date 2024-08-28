@@ -6,16 +6,32 @@ const rows = 10;
 const cols = 10;
 const totalCells = rows * cols;
 
-// create cells 
+// function to create cells 
+const createCell = (content = '') => {
+    const cell = document.createElement('div');
+    cell.className = 'cell';
+    cell.append(content);
+    return cell;
+}
+
+// create cells
 play.addEventListener('click', function(e){
     e.preventDefault();
 
     for (let i = 0; i < totalCells; i++) {
-        const cell = document.createElement('div');
-        cell.className = 'cell';
-    
+        const cell = createCell(i + 1);
+
+        cell.addEventListener('click', () => {
+        
+            cell.classList.add('clicked');
+            console.log(i);
+        })
+
         grid.appendChild(cell);
     }
-    
 })
+
+
+    
+
 

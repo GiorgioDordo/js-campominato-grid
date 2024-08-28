@@ -36,4 +36,11 @@ header {
     flex-basis: calc(100% / 10);
     border: 1px solid white;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cell.clicked {
+    background: lightgreen;
 }
